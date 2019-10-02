@@ -12,6 +12,8 @@
 }
 body {
     background-color: var(--gray-light);
+    padding: 0;
+    margin: 0;
 }
 
 h1 {
@@ -34,14 +36,54 @@ h5 {
 }
 
 .container {
-    margin: 0 10px;
+    /*margin: 0 10px;*/
 }
+
+/* === main grid set up for page === */
 
 #main-content {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 10em 12em 10em 350px 250px;
+    /*grid-template-rows: 1fr 12em 10em 350px 250px;*/
 }
+
+
+#header-logo {
+    margin: 3.5em 0;
+    /*border: 3px solid black;*/
+    height: 75px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: white;
+    grid-template-areas:
+        "boxlogo boxlogo boxlogo"
+        ;
+}
+
+#logoimg {
+    position: absolute;
+    left: 30%;
+    top: -45%;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+#boxlogo {
+    position: relative;
+    display: flex;
+    grid-area: boxlogo;
+}
+
+#titlexs {
+    font-family: 'Abel', sans-serif;
+    font-size: 3em;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
 
 /*Small devices (landscape phones, 576px and up)*/
 /*@media (min-width: 576px) { ... }*/
