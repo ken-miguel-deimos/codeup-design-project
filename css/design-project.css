@@ -107,6 +107,57 @@ h5 {
     margin: 24px 0;
 }
 
+/* === circle design elements === */
+
+#containerh {
+    display: flex;
+    justify-content: center;
+
+}
+
+#circlecont {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-row-gap: .5em;
+    grid-column-gap: 1.5em;
+    margin: 2.5em;
+
+}
+
+.circle {
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 8px solid white;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle p {
+    font-family: 'Anton', sans-serif;
+    color: white;
+    font-size: 28px;
+}
+
+.red {
+    background-color: var(--red);
+}
+
+.green {
+    background-color: var(--green);
+}
+
+.blue {
+    background-color: var(--blue);
+}
+
+.orange {
+    background-color: var(--orange);
+}
+
 
 
 /*Small devices (landscape phones, 576px and up)*/
