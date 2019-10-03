@@ -14,61 +14,91 @@
 </head>
 <body>
 
-<header></header>
+<main id="main-content">
 
-<div id="main-content" class="container">
-    <!-- white space + logo containers   -->
-    <div id="header-logo-container">
-        <div id="boxlogo">
-            <img id="logoimg" src="img/logo.jpg">
+    <header id="header-container">
+        <div id="logo-container">
+            <img id="logo" src="img/logo.jpg">
         </div>
-    </div>
+    </header>
 
-    <p id="titlexs">codeup design</p>
+    <span id="company-name">codeup design</span>
 
     <nav id="native-nav">
         <p>Services, work, blog, contact</p>
     </nav>
 
-    <section id="company-ad">
-        <h2 id="visualdesign">
+    <section id="company-about-container">
+
+        <h2 id="company-page-title">
             VISUAL DESIGN & WEB DEVELOPMENT
         </h2>
 
-        <h4>
+        <h4 id="company-location-header">
             FROM PARK CITY, UTAH
         </h4>
-        <div id="containerh">
-           <div id="circlecont">
-            <div class="circle red"><p>DESIGN</p></div>
-            <div class="circle orange"><p>DEVELOP</p></div>
-            <div class="circle green"><p>SUPPORT</p></div>
-            <div class="circle blue"><p>HOST</p></div>
+
+        <div id="pillar-container">
+           <div id="pillar-div-list">
+               <div class="pillar red">
+                   <span class="pillar-text">DESIGN</span>
+               </div>
+               <div class="pillar orange">
+                   <span class="pillar-text">DEVELOP</span>
+               </div>
+               <div class="pillar green">
+                   <span class="pillar-text">SUPPORT</span>
+               </div>
+               <div class="pillar blue">
+                   <span class="pillar-text">HOST</span>
+               </div>
            </div>
         </div>
-        <hr>
 
+        <hr>
     </section>
 
-    <p id="featured-title" class="abel">SELECTED WORK</p>
+    <p id="selected-featured-title" class="abel">
+        SELECTED WORK
+    </p>
     
-    <div id="project-image-container">
-        <img src="img/apple-ipad.jpg" alt="">
+<!--    <div id="project-image-container">-->
+<!--        <img src="img/apple-ipad.jpg" alt="">-->
+<!--    </div>-->
+
+<!--    <div id="featured-project-info">-->
+
+<!--        <div id="project-image-container">-->
+<!--            <img src="img/apple-ipad.jpg" alt="">-->
+<!--        </div>-->
+
+<!--        <p id="featured-project-title" class="abel">FEATURED PROJECT</p>-->
+
+<!--        <div id="specs-container">-->
+<!--            <div class="feature-project-specs red">D</div>-->
+<!--            <div class="feature-project-specs orange">D</div>-->
+<!--            <div class="feature-project-specs green">S</div>-->
+<!--            <div class="feature-project-specs blue">H</div>-->
+<!--        </div>-->
+
+<!--    </div>-->
+
+    <div id="featured-projects-container">
+
+        <section class="featured-project-card" id="featured-project-1">
+            <img src="img/apple-ipad.jpg" alt="" class="featured-project-image" id="featured-project-image-1">
+            <span class="featured-project-name" id="featured-project-name-1">
+                FEATURED PROJECT
+            </span>
+            <div class="featured-pillar-container" id="featured-pillar-container-1">
+                <div class="featured-pillar anton red">D</div>
+                <div class="featured-pillar anton orange">D</div>
+                <div class="featured-pillar anton green">S</div>
+                <div class="featured-pillar anton blue">H</div>
+            </div>
+        </section>
     </div>
 
-    <div id="featured-project-info">
-
-        <p id="featured-project-title" class="abel">FEATURED PROJECT</p>
-
-        <div id="specs-container">
-            <div class="feature-project-specs red">D</div>
-            <div class="feature-project-specs orange">D</div>
-            <div class="feature-project-specs green">S</div>
-            <div class="feature-project-specs blue">H</div>
-        </div>
-
-    </div>
-
-</div>
+</main>
 </body>
 </html>
