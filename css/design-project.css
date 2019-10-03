@@ -10,17 +10,22 @@
     --orange: #EB9D3A;
     --red: #e6563b;
 }
+
 body {
     background-color: var(--gray-light);
     padding: 0;
     margin: 0;
 }
+
+/* === HEADER PROPERTIES === */
 h1,h2,h3,h4,h5 {
     font-family: 'Anton', sans-serif;
 }
+
 h1 {
     font-size: 64px;
 }
+
 h2 {
     font-size: 48px;
 }
@@ -37,20 +42,19 @@ h5 {
     font-size: 28px;
 }
 
-.container {
-    /*margin: 0 10px;*/
-}
+/*.container {*/
+/*    margin: 0 10px;*/
+/*}*/
 
-/* === main grid set up for page === */
-
+/* === NATIVE GRID LAYOUT === */
 #main-content {
     display: grid;
     grid-template-columns: 1fr;
     /*grid-template-rows: 1fr 12em 10em 350px 250px;*/
 }
 
-
-#header-logo-container {
+/* === PAGE HEADER === */
+#header-container {
     margin: 3.5em 0;
     /*border: 3px solid black;*/
     height: 75px;
@@ -58,11 +62,16 @@ h5 {
     grid-template-columns: repeat(3, 1fr);
     background-color: white;
     grid-template-areas:
-        "boxlogo boxlogo boxlogo"
-        ;
+        "boxlogo boxlogo boxlogo";
 }
 
-#logoimg {
+#logo-container {
+    position: relative;
+    display: flex;
+    grid-area: boxlogo;
+}
+
+#logo {
     position: absolute;
     left: 50%;
     top: 50%;
@@ -72,13 +81,8 @@ h5 {
     border-radius: 50%;
 }
 
-#boxlogo {
-    position: relative;
-    display: flex;
-    grid-area: boxlogo;
-}
-
-#titlexs {
+/* === TITLE: COMPANY NAME === */
+#company-name{
     font-family: 'Abel', sans-serif;
     font-size: 3em;
     text-align: center;
@@ -86,6 +90,7 @@ h5 {
     margin: 0;
 }
 
+/* === NATIVE-NAV CONTAINER*/
 #native-nav {
     height: 3em;
     /*border: 1px solid black;*/
@@ -94,39 +99,36 @@ h5 {
     justify-content: center;
 }
 
-#company-ad {
+/* === COMPANY ABOUT === */
+#company-about-container {
     width: 100vw;
     text-align: center;
-
 }
 
-#company-ad > h2 {
+#company-page-title {
     margin: .5em 0;
 }
 
-#company-ad h4 {
+#main-location-title {
     margin: 24px 0;
 }
 
-/* === circle design elements === */
-
-#containerh {
+/* === 4 MAIN PILLARS === */
+#pillar-container {
     display: flex;
     justify-content: center;
-
 }
 
-#circlecont {
+#pillar-div-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-row-gap: .5em;
     grid-column-gap: 1.5em;
     margin: 2.5em;
-
 }
 
-.circle {
+.pillar {
     margin: 0 auto;
     border-radius: 50%;
     border: 6px solid white;
@@ -137,12 +139,20 @@ h5 {
     align-items: center;
 }
 
-.circle p {
+/*.pillar p {*/
+/*    font-family: 'Anton', sans-serif;*/
+/*    color: white;*/
+/*    font-size: 24px;*/
+/*}*/
+
+/* Changed p tag to span tag and transferred styling */
+.pillar-text {
     font-family: 'Anton', sans-serif;
     color: white;
     font-size: 24px;
 }
 
+/* === UNIVERSAL CLASSES === */
 .red {
     background-color: var(--red);
 }
@@ -163,63 +173,124 @@ h5 {
     font-family: 'Abel', sans-serif;
 }
 
-#featured-title {
+.anton {
+    font-family: 'Anton', sans-serif;
+}
+
+
+/*#project-image-container {*/
+/*    border: 5px solid var(--gray-dark);*/
+/*    border-radius: 3px;*/
+/*    width: 85vw;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*#project-image-container > img {*/
+/*    width: 100%;*/
+/*    grid-area: 1 / 1 / 2 / 2;*/
+/*}*/
+
+/*.feature-project-specs {*/
+/*    border-radius: 50%;*/
+/*    border: none;*/
+/*    height: 18px;*/
+/*    width: 18px;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*    margin: 0 5px;*/
+/*    font-family: 'Anton', sans-serif;*/
+/*    font-size: x-small;*/
+/*}*/
+
+/*#specs-container div:nth-child(4){*/
+/*    margin-right: 0;*/
+/*}*/
+
+/*#specs-container {*/
+/*    grid-area: 2 / 1 / 3 / 2;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+/*#featured-project-info {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(2, 1fr);*/
+/*    grid-template-rows: 4fr 1fr;*/
+/*    width: 85vw;*/
+/*    margin: 5px auto;*/
+/*    grid-column-gap: 50px;*/
+/*}*/
+
+/*#featured-project-title {*/
+/*    text-align: center;*/
+/*    margin: 0;*/
+/*    font-weight: bold;*/
+/*}*/
+
+
+/* === SELECTED FEATURED TITLE === */
+#selected-featured-title {
     text-align: center;
     margin-bottom: 40px;
-    font-weight: bold;
-}
-
-#project-image-container {
-    border: 5px solid var(--gray-dark);
-    border-radius: 3px;
-    width: 85vw;
-    margin: 0 auto;
-}
-
-#project-image-container > img {
-    width: 100%;
-}
-
-.feature-project-specs {
-    border-radius: 50%;
-    border: none;
-    height: 18px;
-    width: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 5px;
-    font-family: 'Anton', sans-serif;
-    font-size: x-small;
-}
-
-#specs-container div:nth-child(4){
-    margin-right: 0;
-}
-
-#specs-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#featured-project-info {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 85vw;
-    margin: 5px auto;
-    grid-column-gap: 50px;
-}
-
-#featured-project-title {
-    text-align: center;
-    margin: 0;
     font-weight: bold;
 }
 
 hr {
     display: none;
 }
+
+/* === FEATURED PROJECTS ===*/
+.featured-project-card {
+    margin: 0 1.5em;
+    display: grid;
+    grid-template-rows: 1fr 1.5em;
+    grid-template-columns: 1fr 1fr;
+}
+
+.featured-project-image {
+    grid-area: 1 / 1 / 2 / -1;
+    width: 100%;
+    border: 5px solid var(--gray-dark);
+    border-radius: 3px;
+}
+
+.featured-project-name {
+    font-family: 'Abel', sans-serif;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-top: 5px;
+}
+
+.featured-pillar-container {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: auto;
+}
+
+.featured-pillar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 10px;
+
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin: 0 3px;
+}
+
+.featured-pillar-container div:nth-child(4){
+    margin-right: 0;
+}
+
+.featured-pillar-container div:nth-child(1){
+    margin-left: auto;
+}
+
 
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
