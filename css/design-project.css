@@ -53,6 +53,32 @@ h5 {
     grid-template-columns: 1fr;
 }
 
+/* === NATIVE NAV ===*/
+
+#native-nav-list {
+    display: flex;
+    list-style: none;
+    /*border: 1px solid black;*/
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+#native-nav-list li{
+}
+
+#native-nav-list a {
+    display: inline-block;
+    text-decoration: none;
+    padding: .7em;
+    color: black;
+
+
+}
+
 /* === PAGE HEADER === */
 #header-container {
     margin: 3.5em 0;
@@ -303,6 +329,10 @@ hr {
         display: block;
         width: 70vw;
         color: var(--gray-light);
+    }
+
+    #native-nav {
+
     }
 
 }
