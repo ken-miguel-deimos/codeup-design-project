@@ -72,6 +72,10 @@ h5 {
     grid-area: boxlogo;
 }
 
+#medhead {
+    display: none;
+}
+
 #logo {
     position: absolute;
     left: 50%;
@@ -260,6 +264,10 @@ hr {
     display: none;
 }
 
+#feed-title {
+    display: none;
+}
+
 /*Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {
     #header-container {
@@ -319,10 +327,44 @@ hr {
 
 /*Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
+
+    #company-name {
+        display: none;
+    }
+
+    #native-nav {
+        display: none;
+    }
+
+    #medhead {
+        display: inline;
+        position: absolute;
+        left: 8em;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 30px;
+    }
+
+    #company-page-title {
+        font-size: 3.5em;
+    }
+
+    hr {
+        width: calc(100vw - 4em);
+    }
+
+    .pillar {
+        margin: 0 1.5em;
+    }
+
+    #logo {
+        left: 6em;
+    }
    #med-grid {
        display: grid;
        grid-template-areas:
             "selwork selwork feedtitle"
+            "projcont projcont newsfeed"
             "projcont projcont newsfeed"
             "projcont projcont newsfeed";
        grid-column-gap: 1em;
@@ -331,7 +373,7 @@ hr {
     #selected-featured-title {
         grid-area: selwork;
         text-align: left;
-        margin: 1.4em;
+        margin: 2em;
     }
 
     #featured-projects-container {
@@ -341,6 +383,7 @@ hr {
         grid-row-gap: 3em;
         grid-column-gap: 3em;
    }
+
     .featured-project-card {
         margin: 0 0.5em;
         grid-template-columns: 2fr 1fr;
@@ -352,23 +395,32 @@ hr {
     }
 
     #news-f-container img {
-        width: 25%;
+        width: 3em;
+        height: 3em;
+        border: 2px solid var(--gray-dark);
+        border-radius: 5px;
     }
 
     #feed-title {
+        display: inline;
         text-align: left;
         margin-top: 1.4em;
         grid-area: feedtitle;
     }
 
+
+
     #news-feed {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
+        /*display: flex;*/
+        /*flex-direction: column;*/
+        /*justify-content: space-evenly;*/
+
+        display: inline-grid;
+        grid-template-columns: 1fr 2fr;
     }
 
     #news-feed div {
-        display: flex;
+        /*display: flex;*/
         /*margin-bottom: 2em;*/
     }
 
@@ -382,6 +434,10 @@ hr {
 
     #twitter-feed {
         margin-top: 2em;
+    }
+
+    .fa-twitter {
+        margin-right: 1em;
     }
 
 }
