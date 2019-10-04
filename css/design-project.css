@@ -446,13 +446,17 @@ hr {
         grid-area: projcont;
         /*margin-left: 1.5em;*/
         grid-row-gap: 3em;
-        grid-column-gap: 4em;
+        grid-column-gap: 3em;
     }
 
     .featured-project-card {
         /*margin: 0 0.5em;*/
         /*margin: 0;*/
         grid-template-columns: 2fr 1fr;
+    }
+
+    .featured-project-name {
+        font-size: .8em;
     }
 
     #news-f-container {
