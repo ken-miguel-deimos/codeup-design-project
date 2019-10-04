@@ -287,12 +287,14 @@ hr {
     #native-nav {
         display: none;
     }
+
     #nav-view {
         display: flex;
         width: 100%;
         justify-content: center;
         align-items: center;
     }
+
     #nav-view-list {
         width: 100%;
         display: flex;
@@ -310,6 +312,7 @@ hr {
     #nav-view-list li:nth-child(2) {
         margin-right: auto;
     }
+
     #nav-view-list li:nth-child(3) {
         margin-left: auto;
     }
@@ -394,6 +397,7 @@ hr {
     #nav-view-list li:nth-child(2) {
         margin-right: 0;
     }
+
     #nav-view-list li:nth-child(3) {
         margin-left: 0;
     }
@@ -531,13 +535,7 @@ hr {
 @media (min-width: 1200px) {
     #large-breakpoint-container {
         display: grid;
-        grid-template-areas:
-                            ". main main main . "
-                            ". main main main . "
-                            ". main main main . "
-                            ". main main main . "
-                            ". main main main . "
-                            ". main main main . ";
+        grid-template-areas: ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . ";
     }
 
     #main-content {
