@@ -446,7 +446,7 @@ hr {
         grid-area: projcont;
         /*margin-left: 1.5em;*/
         grid-row-gap: 3em;
-        /*grid-column-gap: 1em;*/
+        grid-column-gap: 4em;
     }
 
     .featured-project-card {
@@ -528,8 +528,9 @@ hr {
     /*    display: inline-grid;*/
     /*}*/
     hr {
-        width: calc(100vw - 21em);
-        margin-left: 10em;
+        /*width: calc(100vw - 21em);*/
+        width: calc(100vw - 25%);
+        /*margin-left: 10em;*/
     }
 
     #med-grid {
