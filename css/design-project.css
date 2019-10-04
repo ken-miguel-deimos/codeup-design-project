@@ -541,8 +541,8 @@ hr {
     /*}*/
     hr {
         /*width: calc(100vw - 21em);*/
-        width: calc(100vw - 25%);
-        /*margin-left: 10em;*/
+        width: calc(100vw - 30%);
+        margin-left: 11em;
     }
 
     #med-grid {
