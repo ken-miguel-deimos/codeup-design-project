@@ -175,7 +175,6 @@ h5 {
     align-items: center;
 }
 
-/* Changed p tag to span tag and transferred styling */
 .pillar-text {
     font-family: 'Anton', sans-serif;
     color: white;
@@ -273,8 +272,7 @@ hr {
     display: none;
 }
 
-/* === news feed === */
-
+/* === NEWS FEED === */
 #news-f-container {
     display: none;
 }
@@ -344,13 +342,10 @@ hr {
         display: inherit;
     }
 
-
     .pillar {
         margin: 0 .2em;
         border-radius: 50%;
         border: 8px solid white;
-        /*height: 110px;*/
-        /*width: 110px;*/
         display: flex;
         justify-content: center;
         align-items: center;
@@ -379,28 +374,28 @@ hr {
         display: none;
     }
 
-    #native-nav {
-        display: none;
+    #logo {
+        left: 6em;
     }
 
     #nav-view {
-        display: flex;
-        width: 100%;
+        /*display: flex;*/
+        /*width: 100%;*/
         justify-content: flex-end;
-        align-items: center;
+        /*align-items: center;*/
     }
     #nav-view-list {
-        width: 100%;
-        display: flex;
+        /*width: 100%;*/
+        /*display: flex;*/
         justify-content: flex-end;
-        margin: 0 0;
-        padding: 0;
-        height: 2em;
+        margin: 0 1.5em;
+        /*padding: 0;*/
+        /*height: 2em;*/
         align-items: center;
     }
 
     #nav-view-list a {
-        padding: .7em;
+        /*padding: .7em;*/
     }
 
     #nav-view-list li:nth-child(2) {
@@ -423,7 +418,7 @@ hr {
     #company-page-title {
         margin-left: 2.5em;
         margin-right: 2.5em;
-        font-size: 40px;
+        /*font-size: 40px;*/
     }
 
     hr {
@@ -432,10 +427,6 @@ hr {
 
     .pillar {
         margin: 0 1em;
-    }
-
-    #logo {
-        left: 6em;
     }
 
     #med-grid {
@@ -451,11 +442,11 @@ hr {
     }
 
     #featured-projects-container {
-        display: inline-grid;
+        /*display: inline-grid;*/
         grid-area: projcont;
-        margin-left: 1.5em;
+        /*margin-left: 1.5em;*/
         grid-row-gap: 3em;
-        grid-column-gap: 1em;
+        /*grid-column-gap: 1em;*/
     }
 
     .featured-project-card {
@@ -484,20 +475,18 @@ hr {
         grid-area: feedtitle;
     }
 
-
     #news-feed {
         display: inline-grid;
         grid-template-columns: 0.5fr 2fr;
     }
 
-
-    #news-feed div > img {
-        width: 4em;
-        height: 4em;
-        margin-right: 1em;
-        border: 2px solid var(--gray-dark);
-        border-radius: 3px;
-    }
+    /*#news-feed div > img {*/
+    /*    width: 10em;*/
+    /*    height: 4em;*/
+    /*    margin-right: 1em;*/
+    /*    border: 2px solid var(--gray-dark);*/
+    /*    border-radius: 3px;*/
+    /*}*/
 
     #twitter-feed {
         margin-top: 2em;
@@ -521,16 +510,12 @@ hr {
     }
 
     #medhead {
-        display: inline;
-        position: absolute;
-        left: 8em;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 30px;
-    }
-
-    #medhead {
+        /*display: inline;*/
+        /*position: absolute;*/
         left: 12em;
+        /*top: 50%;*/
+        /*transform: translate(-50%, -50%);*/
+        /*font-size: 30px;*/
     }
 
     #company-page-title {
@@ -539,19 +524,18 @@ hr {
         /*font-size: 40px;*/
     }
 
-    #main-content {
-        display: inline-grid;
-    }
-
-    #med-grid {
-        display: inline-grid;
-        margin: 0 0 0 10em;
-        width: 70vw;
-    }
-
+    /*#main-content {*/
+    /*    display: inline-grid;*/
+    /*}*/
     hr {
         width: calc(100vw - 21em);
         margin-left: 10em;
+    }
+
+    #med-grid {
+        /*display: inline-grid;*/
+        margin: 0 0 0 10em;
+        width: 70vw;
     }
 
     #featured-projects-container {
@@ -562,16 +546,27 @@ hr {
         margin-left: 0;
     }
 
-    #pillar-div-list {
-
-    }
-
-    #large-breakpoint-container {
-        display: grid;
-        grid-template-areas: ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . ";
-    }
+    /*#large-breakpoint-container {*/
+    /*    display: grid;*/
+    /*    grid-template-areas: ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . " ". main main main . ";*/
+    /*}*/
 
 }
 
 /*Extra large devices (large desktops, 1200px and up)*/
-/*@media (min-width: 1200px) { ... }*/
+@media (min-width: 1200px) {
+    #large-breakpoint-container {
+        display: grid;
+        grid-template-areas:
+                            ". main main main . "
+                            ". main main main . "
+                            ". main main main . "
+                            ". main main main . "
+                            ". main main main . "
+                            ". main main main . ";
+    }
+
+    #main-content {
+        grid-area: main;
+    }
+}
