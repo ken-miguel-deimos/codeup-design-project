@@ -219,8 +219,8 @@ hr {
 
 /* === FEATURED PROJECTS ===*/
 .featured-project-card {
-    /*margin: 0 1.5em;*/
-    margin: 0;
+    width: 80%;
+    margin: 0 auto;
     display: grid;
     grid-template-rows: 1fr 1.5em;
     grid-template-columns: 1fr 1fr;
@@ -340,6 +340,10 @@ hr {
 
     #featured-projects-container section:nth-child(n+2) {
         display: inherit;
+    }
+
+    .featured-project-card {
+        width: 100%;
     }
 
     .pillar {
@@ -475,7 +479,7 @@ hr {
     #feed-title {
         display: inline;
         text-align: left;
-        margin-top: 1.4em;
+        margin-top: 2em;
         grid-area: feedtitle;
     }
 
@@ -494,6 +498,10 @@ hr {
 
     #twitter-feed {
         margin-top: 2em;
+    }
+
+    .fsubhead {
+        padding: 2%;
     }
 
     .fa-twitter {
@@ -539,12 +547,13 @@ hr {
 
     #med-grid {
         /*display: inline-grid;*/
-        margin: 0 0 0 10em;
+        margin: 0 0 0 20%;
         width: 70vw;
     }
 
     #featured-projects-container {
         margin: 0;
+        grid-column-gap: 6em;
     }
 
     #selected-featured-title {
@@ -574,4 +583,13 @@ hr {
     #main-content {
         grid-area: main;
     }
+
+    hr {
+        width: calc(100vw - 30%);
+    }
+
+    #med-grid {
+        margin: 0 0 0 18%;
+    }
+
 }
